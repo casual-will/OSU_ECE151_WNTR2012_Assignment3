@@ -181,11 +181,9 @@ void print_list_file(struct node *head, FILE *stream){
 	int length = list_length(cursor);
 	
 	if (length == 0) return;
-	printf("WE WIN\n");
 	if (cursor == NULL) return;
-	
 	fprintf(stream, "%d,%ld\n", length, head->num_assignments);
-	
+	printf("WE WIN\n");
 	for (; length > 0; --length){
 		fprintf(stream, "%s,%s", cursor->first_name, cursor->last_name);
 		for (int i = 0; i < head->num_assignments; ++i){
@@ -228,8 +226,7 @@ struct node* insert(struct node* head, char *given, char *family,
 		/* error check */
 		if (head == NULL){
 			return head;
-		} 
-		
+		}
 	}else{
 		cursor = location(head, family);
 		
@@ -254,13 +251,11 @@ struct node* insert(struct node* head, char *given, char *family,
  */
 struct node* head_node(struct node *head){
 	struct node* cursor = head;
-	
 	if (head != NULL){
 		while (cursor->next != NULL){
 			cursor = cursor->next;
 		}
 	}
-	
 	return cursor;
 }
 
