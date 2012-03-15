@@ -17,11 +17,10 @@
 
  
 int main(int argc, char **argv){
+	struct node *head;
 	FILE *fp = fopen("input_list.txt", "r");
-	list_from_file(NULL, fp);
-	struct node* head = head_node(head);
+	head = list_from_file(NULL, fp);
 	FILE *paste = fopen("output_list.txt", "w");
-	print_list_file(head, fp);
+	print_list_file(head, paste);
 	return 0;
 }
-
