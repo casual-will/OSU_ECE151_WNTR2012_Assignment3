@@ -7,7 +7,7 @@
  * project. Aka gradebook program
  */
 
-#include "linked.h"
+#include "kuhnw_hw2.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <float.h>
@@ -19,9 +19,8 @@
 int main(int argc, char **argv){
 	FILE *fp = fopen("input_list.txt", "r");
 	list_from_file(NULL, fp);
-	struct node* head = head_node(head);
 	FILE *paste = fopen("output_list.txt", "w");
-	print_list_file(head, fp);
+	print_list_file(NULL, paste);
 	return 0;
 }
 

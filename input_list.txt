@@ -1,5 +1,4 @@
-4, 3
-Anders,Adam,Assignment1,90,Assignment2,80,Assignment3,60
-Bailey,Bart,Assignment1,93,Assignment2,80,Assignment3,50
-Carter,Carl,Assignment1,90,Assignment2,80,Assignment3,70
-Donovan,Doug,Assignment1,91,Assignment2,80,Assignment3,40
+3,3
+Alvord,Adam,Assignment_1,82,Assignment_2,85,Assignment_3,89
+Beta,Benny,Assignment_1,87,Assignment_2,34,Assignment_3,95
+Coffee,Calvin,Assignment_1,98,Assignment_2,95,Assignment_3,87

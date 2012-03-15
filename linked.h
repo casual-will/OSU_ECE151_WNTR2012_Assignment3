@@ -73,8 +73,6 @@ struct stats{
 
 /********************************************PROTOTYPES*********************************************/
 //main functionality
-struct node *insert(struct node* head, char *given, char *family, struct assignment *assignments,
-                    long int num_assignments);
 struct node *list_from_file(struct node *head, FILE *stream);
 struct node* insert(struct node* head, char *given, char *family, 
                     struct assignment *assignments, long int num_assignments);
@@ -93,7 +91,7 @@ struct node* head_node(struct node *head);
 
 /****MAIN****/
 
-/*!
+ /*!
  * \brief reads a well formatted file, and inserts all entries found into a list pointed to by head,
  * with the given sort order.
  * 
@@ -126,7 +124,6 @@ struct node *list_from_file(struct node *head, FILE *stream){
 		assignments = (struct assignment *)malloc(sizeof(struct assignment) * number_pairs);
 		for(int i = 0; i < number_records; i++){
 			matched = fscanf(stream, name_format, first_name, last_name);
-
 			if (matched != 2){
 				/* matching error */
 				continue;
@@ -142,7 +139,6 @@ struct node *list_from_file(struct node *head, FILE *stream){
 					assignments[j].value = score;
 				}
 			}
-			
 			head = insert(head, first_name, last_name, assignments, number_pairs);
 
 			/* free up the assignments you malloc'd */
@@ -153,7 +149,6 @@ struct node *list_from_file(struct node *head, FILE *stream){
 		/* and then free up assignments */
 		free(assignments);
 	}
-
 	return head;
 }
 /*!
@@ -184,13 +179,13 @@ int list_length(struct node *head){
 void print_list_file(struct node *head, FILE *stream){
 	struct node *cursor = head_node(head);
 	int length = list_length(cursor);
-	printf("wheee");
-	if (length == 0) return;
 	
+	if (length == 0) return;
+	printf("WE WIN\n");
 	if (cursor == NULL) return;
 	
 	fprintf(stream, "%d,%ld\n", length, head->num_assignments);
-
+	
 	for (; length > 0; --length){
 		fprintf(stream, "%s,%s", cursor->first_name, cursor->last_name);
 		for (int i = 0; i < head->num_assignments; ++i){
