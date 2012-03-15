@@ -1,5 +1,5 @@
 4, 3
-Last1,First1,Assignment1,90,Assignment2,80,Assignment3,60
-Last2,First2,Assignment1,90,Assignment2,80,Assignment3,50
-Last3,First3,Assignment1,90,Assignment2,80,Assignment3,70
-Last4,First4,Assignment1,90,Assignment2,80,Assignment3,40
+Anders,Adam,Assignment1,90,Assignment2,80,Assignment3,60
+Bailey,Bart,Assignment1,93,Assignment2,80,Assignment3,50
+Carter,Carl,Assignment1,90,Assignment2,80,Assignment3,70
+Donovan,Doug,Assignment1,91,Assignment2,80,Assignment3,40
